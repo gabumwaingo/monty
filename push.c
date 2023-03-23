@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int number)
 	num = strtok(NULL, DELIMS);
 	if (num == NULL)
 	{
-		printf("L%u: usage: push integer\n",_number);
+		printf("L%u: usage: push integer\n",number);
 		exit(EXIT_FAILURE);
 	}
 
