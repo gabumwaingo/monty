@@ -1,12 +1,13 @@
 #include "monty.h"
 
 /**
- * push - adds elements to the stack
- * @stack: pointer to the head of the head of the stack
- * @number: the elementto be added
- * Return: nothing
+ * push - pushes new node to the end of the stack
+ * @stack: double pointer to the head of the stack
+ * @line_number: the number of a line of the file
+ *
+ * Return: void
  */
-void push(stack_t **stack, unsigned int number)
+void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node;
 	char *num;
@@ -14,7 +15,7 @@ void push(stack_t **stack, unsigned int number)
 	num = strtok(NULL, DELIMS);
 	if (num == NULL)
 	{
-		printf("L%u: usage: push integer\n", number);
+		printf("L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

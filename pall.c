@@ -1,15 +1,17 @@
 #include "monty.h"
+
 /**
- * pall - prints the stack from top to bottom
- * @stack: pointer to the head of the stack
- * @number: number of a line in the file
- * Return: nothing
+ * pall - prints all values from the stack
+ * @stack: double pointer to the head of the stack
+ * @line_number: the number of a line of the file
+ *
+ * Return: void
  */
-void pall(stack_t **stack, unsigned int number)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 
-	(void) number;
+	(void) line_number;
 
 	while (temp)
 	{
